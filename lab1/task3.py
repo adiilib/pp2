@@ -1,6 +1,4 @@
-s = input()
+a = int(input())
+b = int(input())
 
-if s.isdigit():
-    print("int")
-else:
-    print("str")
+print(a + b)
