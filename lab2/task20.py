@@ -1,17 +1,17 @@
 n = int(input())
 doc = {}
+output = []
 
 for _ in range(n):
-    parts = input().split()
-    command = parts[0]
-    
-    if command == "set":
-        key = parts[1]
-        value = parts[2]
+    cmd = input().split()
+    if cmd[0] == "set":
+        key, value = cmd[1], cmd[2]
         doc[key] = value
-    elif command == "get":
-        key = parts[1]
+    elif cmd[0] == "get":
+        key = cmd[1]
         if key in doc:
-            print(doc[key])
+            output.append(doc[key])
         else:
-            print(f"KE: no key {key} found in the document")
+            output.append(f"KE: no key {key} found in the document")
+
+print("\n".join(output))
