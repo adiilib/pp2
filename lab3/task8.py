@@ -1,20 +1,15 @@
-class Account:
-    def __init__(self, balance):
-        self.balance = balance
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-    def deposit(self, amount):
-        self.balance += amount
-
-    def withdraw(self, amount):
-        if amount > self.balance:
-            return "Insufficient Funds"
-        self.balance -= amount
-        return self.balance
+    def area(self):
+        pi = 3.14159
+        return pi * self.radius ** 2
 
 
-balance, withdraw_amount = map(int, input().split())
+r = int(input())
 
-acc = Account(balance)
+c = Circle(r)
 
-result = acc.withdraw(withdraw_amount)
-print(result)
+
+print(f"{c.area():.2f}")
