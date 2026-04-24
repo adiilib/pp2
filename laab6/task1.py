@@ -1,6 +1,4 @@
-n = int(input())
-nums = list(map(int, input().split()))
+l = [1,2,3,"abc"]
 
-squares = map(lambda x: x*x, nums)
-
-print(sum(squares))
+n = list(map(lambda x:isinstance(x,str),l))
+print(n)

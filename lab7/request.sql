@@ -1,0 +1,9 @@
+CREATE DATABASE phone_book;
+
+\c phone_book;
+
+CREATE TABLE IF NOT EXISTS contacts (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) UNIQUE NOT NULL
+)
